@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OnlineAlbumMobileApp.Views.ImagePage"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="{Binding ImageURL}" x:Name="PictureImage" 
+                   Aspect="AspectFill" WidthRequest="300" HeightRequest="300" 
+                   HorizontalOptions="Center" Margin="15" />
+            
+            <ActivityIndicator x:Name="indicator" Color="Green" VerticalOptions="Center" HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="SelectImageButton" Text="Select" Order="Primary" Priority="0" Clicked="SelectImageButton_Clicked"/>
+        <ToolbarItem x:Name="UploadImageButton" Text="Upload" Order="Primary" Priority="0" Clicked="UploadImageButton_Clicked"/>
+        <ToolbarItem x:Name="DeleteImageButton" Text="Delete" Order="Primary" Priority="0" Clicked="DeleteImageButton_Clicked"/>
+    </ContentPage.ToolbarItems>
+</ContentPage>
